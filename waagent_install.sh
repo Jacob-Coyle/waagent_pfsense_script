@@ -24,6 +24,10 @@ mv /tmp/waagent_pfsense_script/waagent.conf /usr/local/etc/
 mv /tmp/waagent_pfsense_script/rc.d/waagent /usr/local/etc/rc.d/
 mv /tmp/waagent_pfsense_script/waagent /usr/local/sbin
 ln -s /tmp/waagent_pfsense_script/rc.d/waagent /tmp/waagent_pfsense_script/rc.d/waagent.sh
+ln -s /usr/local/etc/rc.d/waagent /usr/local/etc/rc.d/waagent.sh
+
+chmod 755 /usr/local/etc/rc.d/waagent
+chmod 755 /usr/local/sbin/waagent
 
 #Enabled service
 echo 'waagent_enable="YES"' >> /etc/rc.conf.local
